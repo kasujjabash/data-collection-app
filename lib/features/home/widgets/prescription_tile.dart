@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../data/models/prescription.dart';
+import '../../prescription/screens/prescription_detail_screen.dart';
 
 class PrescriptionTile extends StatelessWidget {
   final Prescription prescription;
@@ -23,7 +24,13 @@ class PrescriptionTile extends StatelessWidget {
     final isPending = prescription.syncStatus == 'pending';
 
     return InkWell(
-      onTap: () {},
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) =>
+              PrescriptionDetailScreen(prescription: prescription),
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
         child: Row(
