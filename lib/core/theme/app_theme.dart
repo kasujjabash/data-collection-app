@@ -6,6 +6,7 @@ class AppTheme {
 
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color primary = Color(0xFF4ECDC4);
   static const Color grey100 = Color(0xFFF5F5F5);
   static const Color grey200 = Color(0xFFEEEEEE);
   static const Color grey400 = Color(0xFFBDBDBD);
@@ -15,9 +16,9 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: const ColorScheme.light(
-        primary: black,
+        primary: primary,
         onPrimary: white,
-        secondary: black,
+        secondary: primary,
         onSecondary: white,
         surface: white,
         onSurface: black,
@@ -69,10 +70,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          textStyle: const TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w600,
-          ),
+          textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
         ),
       ),
       textButtonTheme: TextButtonThemeData(

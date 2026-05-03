@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
-import 'features/home/screens/home_screen.dart';
+import 'screens/main_navigation_screen.dart';
 
 class PharmacyApp extends StatelessWidget {
   const PharmacyApp({super.key});
@@ -11,7 +11,7 @@ class PharmacyApp extends StatelessWidget {
       title: 'Pharma Capture',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const HomeScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }
